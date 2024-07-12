@@ -1,0 +1,16 @@
+<h2 class="text-xl font-medium text-slate-700">Listado de Heroes</h2>
+
+<h3 *ngIf="deletedHero else noDeleted" >Héroe borrado: <span class="text-red-900 text-[20px]">{{ deletedHero }}</span></h3>
+
+<ng-template #noDeleted>
+  <h3 #noDeleted>No se ha borrado nada</h3>
+</ng-template>
+
+
+<button (click)="removeHero()" class="bg-cyan-600 rounded-lg text-white py-1 px-2 my-2">Borrar último héroe</button>
+
+<ul>
+  <li *ngFor="let hero of heroes" class="font-semibold text-cyan-800 p-2 border-b">
+    {{ hero }}
+  </li>
+</ul>

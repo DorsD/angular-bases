@@ -1,0 +1,7 @@
+<h2 class="text-xl font-medium text-slate-700">Counter</h2>
+<h3>Counter: {{ counter }}</h3>
+<div class="flex gap-2">
+  <button class="bg-teal-600 rounded-lg text-white py-1 px-2 my-2" (click)="increaseBy(+1)" >Increment</button>
+  <button class="bg-teal-400 rounded-lg text-white py-1 px-2 my-2" (click)="reset()" >Reset</button>
+  <button class="bg-teal-600 rounded-lg text-white py-1 px-2 my-2" (click)="increaseBy(-1)" >Decrement</button>
+</div>

@@ -1,0 +1,20 @@
+<h2 class="text-xl font-medium text-slate-700">Heroes</h2>
+<h3 class="text-lg my-2">Dors</h3>
+<dl>
+  <td>Name:</td>
+  <dd class="font-medium mb-4">{{ name }}</dd>
+
+  <td>Edad:</td>
+  <dd class="font-medium mb-4">{{ age }}</dd>
+
+  <td>Método:</td>
+  <dd class="font-medium mb-4">{{ getHeroDescription() }}</dd>
+
+  <td>Capitalizado:</td>
+  <dd class="font-medium mb-4">{{ capitalizedName }}</dd>
+</dl>
+
+<div class="flex gap-4">
+  <button *ngIf="name !== 'Hari Seldon'" class="bg-fuchsia-600 rounded-lg text-white py-1 px-2" (click)="changeHeroName()" >Cambiar nombre</button>
+  <button *ngIf="age !== 40" class="border border-fuchsia-600 rounded-lg text-fuchsia-600 py-1 px-2" (click)="changeHeroAge()" >Cambiar edad</button>
+</div>
