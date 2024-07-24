@@ -1,0 +1,11 @@
+<h1 class="text-2xl text-cyan-800">Fundación Personajes</h1>
+
+<div class="flex gap-8 m-4">
+  <div class="flex flex-col gap-2">
+    <dbz-list [characterList]="characters" (onDelete)="onDeleteCharacter($event)"/>
+  </div>
+  <div class="flex flex-col gap-2">
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" />
+  </div>
+</div>
+

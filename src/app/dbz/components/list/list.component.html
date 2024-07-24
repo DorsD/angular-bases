@@ -1,0 +1,22 @@
+<h2>Personajes</h2>
+<ul class="flex flex-col gap-2">
+  <li *ngFor="
+    let character of characterList;
+    let i = index;
+    let isEven = even
+  " 
+  class="font-semibold text-cyan-800 border-b flex justify-between items-center gap-6 p-1"
+  [ngClass]="{'text-purple-800': isEven}">
+    <div>
+      <span>{{i + 1}}.- </span>
+      <span>{{ character.name }} - </span>
+      <span>Power: {{ character.power }} </span>
+    </div>  
+    <button
+      class="py-0.5 px-2 rounded-lg bg-red-600 text-white"
+      (click)="onDeleteCharacter(character.id)"
+    >
+      X
+    </button>
+  </li>
+</ul>
